@@ -33,23 +33,29 @@ repositories {
 group = "me.vladkanash"
 version = "0.0.1-SNAPSHOT"
 
+dependencyManagement {
+    dependencies {
+        dependency("org.springframework:spring-boot-dependencies:3.2.0")
+    }
+}
+
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.springframework.boot:spring-boot-starter-jooq:3.1.0")
-    implementation("org.springframework.boot:spring-boot-starter-webflux:3.0.4")
-    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2")
+    implementation("org.springframework.boot:spring-boot-starter-jooq")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     implementation("org.jooq:jooq-kotlin:3.18.7")
     implementation("org.jooq:jooq-kotlin-coroutines:3.18.7")
 
     implementation("org.postgresql:r2dbc-postgresql:1.0.1.RELEASE")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.0")
-    testImplementation("org.springframework.boot:spring-boot-testcontainers:3.2.0")
-    testImplementation("org.testcontainers:postgresql:1.17.6")
-    testImplementation("org.testcontainers:junit-jupiter:1.17.6")
-    testImplementation("org.testcontainers:r2dbc:1.17.6")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:r2dbc")
 }
 
 tasks.withType<KotlinCompile> {
