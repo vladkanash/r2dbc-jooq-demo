@@ -15,7 +15,7 @@ buildscript {
     dependencies {
         classpath("org.postgresql:postgresql:42.5.0")
         classpath("org.testcontainers:postgresql:1.17.6")
-        classpath("org.jooq:jooq-codegen:3.19.0")
+        classpath("org.jooq:jooq-codegen:3.18.7")
     }
 }
 
@@ -40,13 +40,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2")
 
-    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.2.2")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.7.1")
-
-    implementation("org.jooq:jooq:3.19.0")
-    implementation("org.jooq:jooq-kotlin:3.19.0")
-    implementation("org.jooq:jooq-kotlin-coroutines:3.19.0")
+    implementation("org.jooq:jooq-kotlin:3.18.7")
+    implementation("org.jooq:jooq-kotlin-coroutines:3.18.7")
 
     implementation("org.postgresql:r2dbc-postgresql:1.0.1.RELEASE")
 
